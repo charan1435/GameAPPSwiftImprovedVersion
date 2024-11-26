@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MockTestRecheckApp: App {
+    @State var fontSize: Double = 20.0
+    @State var selectedFontColor : AppThemeColour = .red
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(fontSize: $fontSize, selectedFontColor: $selectedFontColor)
         }
     }
 }
